@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package practice;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author kumar
+ */
+public class Practice {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+           int old;old = 1;
+        int i = 0;
+        int total=0;
+        int newreg = 1;
+        System.out.println("no.of cuts to be made");
+        Scanner input = new Scanner(System.in);
+        int cut = input.nextInt();
+        total = old + ((cut*(cut+1))/2);
+        while(cut!=0)
+        {
+            i=i+1;                    
+            newreg = newreg + i;            
+            cut=cut-1;
+        }
+        
+        System.out.println("total regions(by loop) = " + newreg);    
+        System.out.println("total region by direct = "  + total);
+        //new region at any given time;
+        System.out.println("enter new and old : ");
+        int j = input.nextInt();
+        int noold = total - j;
+        System.out.println("old and new regions : " + noold +" and "+ j);
+        
+      
+    }
+    
+}
